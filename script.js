@@ -12,6 +12,30 @@ let data = [];
 // datax.s.remove
 // console.log(datax)
 
+////////////New-feature->reset button-this button will delete whole data and assign a empty array
+function reset(localstorage_key){
+  const btn1=document.createElement("button");
+  document.getElementById("inp1_div").appendChild(btn1);
+  btn1.innerText="reset";
+
+  btn1.addEventListener("click",()=>{
+localStorage.setItem(localstorage_key,"[]")
+location.reload();
+  })
+}
+
+
+reset("val1")
+
+
+
+
+
+
+
+
+
+
 //creataing a function which stringify and parse the data to use in localhost;
 function localstorage_output(key) {
   if (

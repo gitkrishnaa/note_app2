@@ -94,8 +94,11 @@ function data_add(key, data) {
 const data_of_localstorage = JSON.parse(localStorage.getItem('val1'));
 
 for (let a in data_of_localstorage) {
-  arr_load(a, data_of_localstorage);
-}
+  if(data_of_localstorage[a]!="null"){
+    arr_load(a, data_of_localstorage);
+  }
+  }
+  
 
 function arr_load(a, array) {
   const localstorage_key = 'val1';

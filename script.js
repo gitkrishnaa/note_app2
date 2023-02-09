@@ -1,3 +1,39 @@
+//<<<<<<<<  info of site in alert>>>>>>>>>
+
+let info=document.getElementById("info").addEventListener("click",()=>{
+  alert(
+
+
+ `feature(for developer)-> 1.using localstorage.
+            2.edit delete function in localstrge also
+            3.using array in localstorage
+            4.localstorge key "val1" | array[]
+
+
+
+1)id and array element index will be same when it  
+2) i have used,loder function,input data function  
+3)when delete button click->it get null and when the null data not get printed or rendered; 
+4)edit and delete button work on array index and i 
+
+5)most important= localstorage key value >>>>>>>> "val1"<<<<<<<<<<<<<<`
+
+
+    
+  )
+})
+
+
+
+
+
+
+
+
+
+
+
+
 let inp1 = document.getElementById('input');
 let btn1 = document.getElementById('btn1');
 let display = document.getElementById('display');

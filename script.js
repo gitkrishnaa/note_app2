@@ -90,7 +90,7 @@ function data_add(key, data) {
     localStorage.setItem(key, new_data_json);
   }
 }
-
+/////////////////////////////// <<<<<<<<<< data lodeing part render>>>>>>>>>>>>>>>>
 const data_of_localstorage = JSON.parse(localStorage.getItem('val1'));
 
 for (let a in data_of_localstorage) {
@@ -168,8 +168,34 @@ function arr_load(a, array) {
     }
   });
 }
-
+// <<<<<<<<<<<<<<<<<< data inseting on input part     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 btn1.addEventListener('click', function loader(data) {
+
+
+
+
+
+  let inp_2 = document.getElementById('input');
+  let inp1 = document.getElementById('input_1');
+  let inp3 = document.getElementById('input_select');
+
+// condintion if input field is empty then dont run
+if(inp_2.value=="" && inp1.value==""){
+  alert("both  filed is empty ")
+  return;
+
+}
+else if(inp_2.value==""){
+  alert("description input field is empty ")
+
+  return;
+}
+else if(inp1.value==""){
+  alert("movie ticket price input field is empty ")
+  return;
+}
+
+
   //note  key for is val1
   const localstorage_key = 'val1';
   let inp2 = inp1.value;
@@ -184,10 +210,16 @@ btn1.addEventListener('click', function loader(data) {
   let in_value = document.createElement('p');
   div1.appendChild(in_value);
   // data.push(inp1.value);
-  data_add('val1', inp1.value);
+
+  const inp_val_combined=inp1.value+"-"+inp_2.value+"-"+inp3.value;
+  data_add('val1', inp_val_combined);
+
+  //after click all input field get empty
+  inp_2.value=""
+  inp1.value=""
   ////////////
   //problem - ehen i fethch in_value from local storage the it givs previous value mean not get updated instant button clicked (guess)
-  in_value.innerText = inp1.value;
+  in_value.innerText =inp_val_combined;
   ///////////
   console.log(data[data.length], 'input');
 
